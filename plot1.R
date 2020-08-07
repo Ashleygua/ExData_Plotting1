@@ -1,0 +1,6 @@
+source('read data.R')
+hist(as.numeric(processed_data$Global_active_power),breaks=6,col="red",main="Global Active Power", xlab="Global Active Power(kilowatts", axes=FALSE)
+axis(1, at = c(0,2,4,6))
+axis(2, at = c(0,200,400,600,800,1000,1200))
+dev.copy(png,"plot1.png")
+dev.off()
